@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+  <div class="alert alert-success">
+	 <strong><div class="breadcrumbs">
+<h2 class="heading">แสดงอำเภอในจังหวัดชัยภูมิ</h2>
+</div></strong>
+  </div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ลำดับ</th>
+      <th>รหัสอำเภอ</th>
+      <th>ชื่ออำเภอ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let amp of ampall; #idx=index">
+      <td>{{idx+1}}</td>
+      <td><a herf="javascript:void(0);"(click)="alertcode(amp.code)">{{amp.code}}</a></td>
+      <td><a herf="javascript:void(0);"(click)="alertname(amp.name)">{{amp.name}}</a></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
